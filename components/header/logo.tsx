@@ -7,7 +7,7 @@ export default function Logo({size}:{size:number}) {
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"
-fill='rgba(240,255,255,1)' stroke="none">
+fill='currentColor' stroke="none">
 <path d="M3041 9243 c-59 -223 -89 -572 -71 -834 23 -349 80 -573 185 -733 25
 -38 45 -70 45 -71 0 -7 -160 48 -203 69 l-49 24 7 -27 c11 -45 96 -172 155
 -231 67 -67 192 -134 343 -185 57 -19 111 -35 118 -35 8 0 20 -4 28 -9 11 -7
