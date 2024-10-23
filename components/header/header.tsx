@@ -2,9 +2,6 @@
 import Link from "next/link";
 import React from "react";
 import Logo from "./logo";
-import { FaFileCode } from "react-icons/fa";
-import { IoMail } from "react-icons/io5";
-import { FaInfo } from "react-icons/fa";
 import { motion } from "framer-motion";
 import NavPC from "./navPC";
 import NavMobile from "./navMobile";
