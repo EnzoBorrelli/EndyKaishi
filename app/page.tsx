@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="font-bold text-center bg-brand-500 w-full h-dvh">
+    <main className="w-full pt-20 font-bold text-center bg-brand-500 h-dvh">
       <h2 className="mb-10 text-4xl text-text-primary">Primary text</h2>
       <h2 className="mb-10 text-2xl text-text-secondary">Secondary text</h2>
       <h2 className="mb-10 text-lg text-text-disabled">disabled text</h2>
