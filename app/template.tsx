@@ -11,7 +11,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
           width: "100dvw",
           height: "100dvh",
           display: "flex",
-          zIndex: "20",
+          zIndex: "-1",
           overflow:"hidden"
         }}
       >
