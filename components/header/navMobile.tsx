@@ -29,11 +29,11 @@ const variants = {
   },
   li: {
     open: {
-        x: 0,
+      x: 0,
       transition: { duration: 0.5 },
     },
     closed: {
-        x: "100dvw",
+      x: "100dvw",
       transition: { duration: 0.5 },
     },
   },
@@ -82,11 +82,11 @@ export default function NavMobile() {
             }}
           >
             <Link
-              href="/projects"
+              href="/portfolio"
               className="flex items-center justify-center gap-1"
             >
               <FaFileCode />
-              Projects
+              Portfolio
             </Link>
           </motion.div>
         </motion.li>
@@ -99,13 +99,13 @@ export default function NavMobile() {
               transition: { duration: 0.1, ease: "easeIn" },
             }}
           >
-            <Link
-              href="/contact"
-              className="flex items-center justify-center gap-1"
+            <a
+              href="mailto:enzoborrelli_official@outlook.com"
+              className="flex items-center gap-1"
             >
               <IoMail />
               Contact Me
-            </Link>
+            </a>
           </motion.div>
         </motion.li>
       </motion.ul>
