@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import { FaInfo, FaFileCode } from "react-icons/fa";
@@ -8,8 +8,9 @@ export default function NavPC() {
   return (
     <nav className="hidden md:block">
       <ul className="flex gap-6 text-lg font-semibold text-text-primary">
-        <li>
-          <motion.div
+      <LazyMotion features={domAnimation}>
+        {/* <li>
+          <m.div
             whileHover={{ y: -5, scale: 1.2, color: "rgb(0, 222, 204)" }}
             whileTap={{
               scale: 1,
@@ -21,10 +22,10 @@ export default function NavPC() {
               <FaInfo size={16} />
               About
             </Link>
-          </motion.div>
+          </m.div>
         </li>
         <li>
-          <motion.div
+          <m.div
             whileHover={{ y: -5, scale: 1.2, color: "rgb(0, 222, 204)" }}
             whileTap={{
               scale: 1,
@@ -36,10 +37,11 @@ export default function NavPC() {
               <FaFileCode />
               Portfolio
             </Link>
-          </motion.div>
+          </m.div>
         </li>
+        */}
         <li>
-          <motion.div
+          <m.div
             whileHover={{ y: -5, scale: 1.2, color: "rgb(0, 222, 204)" }}
             whileTap={{
               scale: 1,
@@ -54,8 +56,9 @@ export default function NavPC() {
               <IoMail />
               Contact Me
             </a>
-          </motion.div>
+          </m.div>
         </li>
+        </LazyMotion>
       </ul>
     </nav>
   );

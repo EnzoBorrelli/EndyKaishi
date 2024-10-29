@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Socials } from "./socials";
-import { motion } from "framer-motion";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 import Mailto from "./mailto";
 
 export default function Footer() {
@@ -12,8 +12,9 @@ export default function Footer() {
       </h2>
       <div className="flex items-center gap-6 text-lg md:justify-center md:text-3xl">
         <Mailto/>
+        <LazyMotion features={domAnimation}>
         {Socials.map((social) => (
-          <motion.a
+          <m.a
             whileHover={{
               y: -8,
               scale: 1.2,
@@ -26,8 +27,9 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <social.icon />
-          </motion.a>
+          </m.a>
         ))}
+        </LazyMotion>
       </div>
     </footer>
   );

@@ -4,7 +4,7 @@ import React from "react";
 import { ProjectType } from "./projectsdata";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaCodeBranch } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 
 export default function Projects({
   projectData,
@@ -14,7 +14,8 @@ export default function Projects({
   delay: number;
 }) {
   return (
-    <motion.article
+    <LazyMotion features={domAnimation}>
+    <m.article
       initial={{ x: "100dvw" }}
       animate={{ x: "0" }}
       transition={{ type: "spring", duration: 0.7, delay: delay * 0.5 }}
@@ -45,7 +46,7 @@ export default function Projects({
           ))}
         </div>
         <div className="flex items-center justify-center gap-6 mt-4 mb-2">
-          <motion.a
+          <m.a
             whileHover={{
               y: -8,
               scale: 1.2,
@@ -60,8 +61,8 @@ export default function Projects({
             {projectData.title === "Zephy Discord Bot"
               ? "Invite me"
               : "website"}
-          </motion.a>
-          <motion.a
+          </m.a>
+          <m.a
             whileHover={{
               y: -8,
               scale: 1.2,
@@ -74,9 +75,10 @@ export default function Projects({
           >
             <FaCodeBranch />
             source code
-          </motion.a>
+          </m.a>
         </div>
       </div>
-    </motion.article>
+    </m.article>
+    </LazyMotion>
   );
 }

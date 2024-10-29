@@ -1,5 +1,5 @@
 "use client";
-import { motion, useAnimationControls } from "framer-motion";
+import { domAnimation, LazyMotion, m, useAnimationControls } from "framer-motion";
 import React, { useEffect } from "react";
 
 const variants = {
@@ -41,7 +41,8 @@ export default function AnimatedText() {
   return (
     <div className="relative w-full h-12 px-2">
       <h2 className="sr-only">{texts[0] + " " + texts[1]}</h2>
-      <motion.h2
+      <LazyMotion features={domAnimation}>
+      <m.h2
         initial="hidden"
         animate={primaryControls}
         variants={{
@@ -52,16 +53,16 @@ export default function AnimatedText() {
         aria-hidden
       >
         {texts[0].split("").map((char, index) => (
-          <motion.span
+          <m.span
             className="inline-block text-brand-200"
             variants={variants}
             key={index}
           >
             {char === " " ? "\u00A0" : char}
-          </motion.span>
+          </m.span>
         ))}
-      </motion.h2>
-      <motion.h2
+      </m.h2>
+      <m.h2
         initial="hidden"
         animate={secondaryControls}
         variants={{
@@ -72,11 +73,12 @@ export default function AnimatedText() {
         aria-hidden
       >
         {texts[1].split("").map((char, index) => (
-          <motion.span className="inline-block" variants={variants} key={index}>
+          <m.span className="inline-block" variants={variants} key={index}>
             {char === " " ? "\u00A0" : char}
-          </motion.span>
+          </m.span>
         ))}
-      </motion.h2>
+      </m.h2>
+      </LazyMotion>
     </div>
   );
 }

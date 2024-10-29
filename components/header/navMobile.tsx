@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaInfo, FaFileCode } from "react-icons/fa";
@@ -42,23 +42,25 @@ const variants = {
 export default function NavMobile() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <motion.nav
-      initial={false}
-      animate={isOpen ? "open" : "closed"}
-      className="w-40 mt-20 md:hidden"
-    >
-      <button
-        className="flex justify-end w-full"
-        onClick={() => setIsOpen(!isOpen)}
+    <LazyMotion features={domAnimation}>
+      <m.nav
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        className="w-40 mt-20 md:hidden"
       >
-        <MenuBtn isActive={isOpen} />
-      </button>
-      <motion.ul
-        variants={variants.ul}
-        className="flex-col gap-6 text-lg font-semibold bg-brand-400 text-text-primary"
-      >
-        <motion.li className="mb-2" variants={variants.li}>
-          <motion.div
+        <button
+          className="flex justify-end w-full"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <MenuBtn isActive={isOpen} />
+        </button>
+        <m.ul
+          variants={variants.ul}
+          className="flex-col gap-6 text-lg font-semibold bg-brand-400 text-text-primary"
+        >
+          {/* 
+        <m.li className="mb-2" variants={variants.li}>
+          <m.div
             whileHover={{ y: -5, scale: 1.2, color: "rgb(0, 222, 204)" }}
             whileTap={{
               scale: 1,
@@ -70,10 +72,10 @@ export default function NavMobile() {
               <FaInfo size={16} />
               About
             </Link>
-          </motion.div>
-        </motion.li>
-        <motion.li className="mb-2" variants={variants.li}>
-          <motion.div
+          </m.div>
+        </m.li>
+        <m.li className="mb-2" variants={variants.li}>
+          <m.div
             whileHover={{ y: -5, scale: 1.2, color: "rgb(0, 222, 204)" }}
             whileTap={{
               scale: 1,
@@ -88,27 +90,29 @@ export default function NavMobile() {
               <FaFileCode />
               Portfolio
             </Link>
-          </motion.div>
-        </motion.li>
-        <motion.li variants={variants.li}>
-          <motion.div
-            whileHover={{ y: -5, scale: 1.2, color: "rgb(0, 222, 204)" }}
-            whileTap={{
-              scale: 1,
-              color: "rgb(242, 176, 61)",
-              transition: { duration: 0.1, ease: "easeIn" },
-            }}
-          >
-            <a
-              href="mailto:enzoborrelli_official@outlook.com"
-              className="flex items-center gap-1"
+          </m.div>
+        </m.li>
+        */}
+          <m.li variants={variants.li}>
+            <m.div
+              whileHover={{ y: -5, scale: 1.2, color: "rgb(0, 222, 204)" }}
+              whileTap={{
+                scale: 1,
+                color: "rgb(242, 176, 61)",
+                transition: { duration: 0.1, ease: "easeIn" },
+              }}
             >
-              <IoMail />
-              Contact Me
-            </a>
-          </motion.div>
-        </motion.li>
-      </motion.ul>
-    </motion.nav>
+              <a
+                href="mailto:enzoborrelli_official@outlook.com"
+                className="flex items-center gap-1"
+              >
+                <IoMail />
+                Contact Me
+              </a>
+            </m.div>
+          </m.li>
+        </m.ul>
+      </m.nav>
+    </LazyMotion>
   );
 }
