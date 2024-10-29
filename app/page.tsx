@@ -1,35 +1,23 @@
-import { Socials } from "@/components/footer/socials";
 import Projects from "@/components/home/projects";
 import { skills } from "@/components/home/skills";
 import { ProjectsData } from "@/components/home/projectsdata";
 import AnimatedText from "@/components/home/animatedText";
+import SocialsComp from "@/components/home/socials";
 
 export default function Home() {
   return (
     <main className="px-10 py-20 text-center size-full bg-brand-500 text-text-primary">
-      <section className="flex justify-center gap-2 px-10 py-4 bg-red-400">
-        <div className="w-1/3 text-left bg-blue-500">
-          <AnimatedText text="Endy Kaishi®"/>
+      <section className="flex justify-center gap-2 px-10 py-4">
+        <div className="w-1/3 text-left">
+          <AnimatedText/>
           <p className="text-lg">
-            a frontend developer specialized in react and nextjs, along wth
-            typescript
+            Frontend Developer, Specialized in React and Next.js, along with
+            Typescript
           </p>
-          <h4 className="text-sm text-text-secondary">
+          <h4 className="text-sm font-light text-text-secondary">
             Located in Buenos Aires, Argentina
           </h4>
-          <div className="flex items-center justify-start gap-4 mt-2 bg-green-300">
-            {Socials.map((social) => (
-              <a
-                className="p-1 rounded-md bg-brand-400 ring-2 ring-text-secondary"
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <social.icon />
-              </a>
-            ))}
-          </div>
+          <SocialsComp/>
         </div>
         <div className="grid grid-cols-4 gap-4 mt-2 bg-orange-300">
           {skills.map((skill) => (
@@ -46,7 +34,7 @@ export default function Home() {
         <h2 className="my-4 text-2xl font-bold">My recent Work</h2>
         <div className="grid grid-cols-3">
           {ProjectsData.map((project, index) => (
-            <Projects projectData={project} delay={index} />
+            <Projects key={index} projectData={project} delay={index} />
           ))}
         </div>
       </section>
