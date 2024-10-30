@@ -1,7 +1,5 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
-import Link from "next/link";
 import React, { useState } from "react";
-import { FaInfo, FaFileCode } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import MenuBtn from "./menuBtn";
 
@@ -58,41 +56,6 @@ export default function NavMobile() {
           variants={variants.ul}
           className="flex-col gap-6 text-lg font-semibold bg-brand-400 text-text-primary"
         >
-          {/* 
-        <m.li className="mb-2" variants={variants.li}>
-          <m.div
-            whileHover={{ y: -5, scale: 1.2, color: "rgb(0, 222, 204)" }}
-            whileTap={{
-              scale: 1,
-              color: "rgb(242, 176, 61)",
-              transition: { duration: 0.1, ease: "easeIn" },
-            }}
-          >
-            <Link href="/about" className="flex items-center justify-center">
-              <FaInfo size={16} />
-              About
-            </Link>
-          </m.div>
-        </m.li>
-        <m.li className="mb-2" variants={variants.li}>
-          <m.div
-            whileHover={{ y: -5, scale: 1.2, color: "rgb(0, 222, 204)" }}
-            whileTap={{
-              scale: 1,
-              color: "rgb(242, 176, 61)",
-              transition: { duration: 0.1, ease: "easeIn" },
-            }}
-          >
-            <Link
-              href="/portfolio"
-              className="flex items-center justify-center gap-1"
-            >
-              <FaFileCode />
-              Portfolio
-            </Link>
-          </m.div>
-        </m.li>
-        */}
           <m.li variants={variants.li}>
             <m.div
               whileHover={{ y: -5, scale: 1.2, color: "rgb(0, 222, 204)" }}
