@@ -1,8 +1,8 @@
 import Projects from "@/components/home/projects";
-import { skills } from "@/components/home/skills";
 import { ProjectsData } from "@/components/home/projectsdata";
 import AnimatedText from "@/components/home/animatedText";
 import SocialsComp from "@/components/home/socials";
+import SkillsBlock from "@/components/home/SkillsBlock";
 
 export default function Home() {
   return (
@@ -19,16 +19,7 @@ export default function Home() {
           </h4>
           <SocialsComp/>
         </div>
-        <div className="grid grid-cols-4 gap-4 mt-2 bg-orange-300">
-          {skills.map((skill) => (
-            <div
-              className="flex items-center justify-center p-1 text-3xl rounded-md size-10 bg-brand-400 "
-              key={skill.name}
-            >
-              <skill.icon />
-            </div>
-          ))}
-        </div>
+        <SkillsBlock/>
       </section>
       <section className="flex-col justify-center gap-2 px-10 py-4 mt-2">
         <h2 className="my-4 text-2xl font-bold">My recent Work</h2>
