@@ -32,7 +32,7 @@ export const ProjectsData: ProjectType[] = [
     description:
       "an ecommerce web for the final project of school. EM ROBOTS",
     tags: ["reactjs", "javascript", "firebase", "auth0","mercadopagoAPI"],
-    toPageUrl: "https://eestn-5-web-page.vercel.app/",
+    toPageUrl: "https://emrobots-virtualshop.netlify.app/Catalogue",
     toCodeUrl: "https://github.com/EnzoBorrelli/EESTN5-webPage",
     img: "/projects/emrobots.png",
   },

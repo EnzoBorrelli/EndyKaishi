@@ -2,7 +2,7 @@ import Projects from "@/components/home/projects";
 import { ProjectsData } from "@/components/home/projectsdata";
 import AnimatedText from "@/components/home/animatedText";
 import SocialsComp from "@/components/home/socials";
-import SkillsBlock from "@/components/home/SkillsBlock";
+import SkillsBlock from "@/components/home/skillsBlock";
 
 export default function Home() {
   return (
