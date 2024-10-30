@@ -6,11 +6,11 @@ import Mailto from "./mailto";
 
 export default function Footer() {
   return (
-    <footer className="items-center justify-between w-full px-8 py-4 md:flex bg-brand-400 ">
-      <h2 className="mb-4 md:text-center md:mb-0 md:text-lg text-text-secondary">
+    <footer className="items-center justify-between px-4 py-4 md:px-8 w-dvw md:flex bg-brand-400 ">
+      <h2 className="mb-4 text-center md:mb-0 md:text-lg text-text-secondary">
         © 2024 Endy Kaishi® by Enzo Borrelli
       </h2>
-      <div className="flex items-center gap-6 text-lg md:justify-center md:text-3xl">
+      <div className="flex items-center justify-center gap-4 text-lg md:gap-6 md:text-3xl">
         <Mailto/>
         <LazyMotion features={domAnimation}>
         {Socials.map((social) => (

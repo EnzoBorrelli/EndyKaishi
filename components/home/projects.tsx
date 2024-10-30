@@ -19,7 +19,7 @@ export default function Projects({
       initial={{ x: "100dvw" }}
       animate={{ x: "0" }}
       transition={{ type: "spring", duration: 0.7, delay: delay * 0.5 }}
-      className="rounded text-left bg-brand-400 max-w-[350px] ring-2 ring-brand-200"
+      className="rounded text-left bg-brand-400 max-w-[350px] ring-2 ring-brand-200 mb-6 md:mb-0"
     >
       <a href={projectData.toPageUrl} target="_blank" rel="noopener noreferrer">
         <Image

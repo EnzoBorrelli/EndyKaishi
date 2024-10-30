@@ -1,26 +1,24 @@
 "use client";
-import Link from "next/link";
-import React from "react";
 import Logo from "./logo";
-import { motion } from "framer-motion";
 import NavPC from "./navPC";
-import NavMobile from "./navMobile";
+import { IoMail } from "react-icons/io5";
 
 export default function Header() {
   return (
-    <header className="fixed z-40 flex items-center justify-between w-full h-20 py-4 md:px-8 backdrop-blur ">
-      <motion.div
-        style={{ color: "rgb(240, 255, 255)" }}
-        whileHover={{ color: "rgb(242, 176, 61)" }}
-        whileTap={{ color: "rgb(0, 222, 204)" }}
+    <header className="fixed z-40 flex items-center justify-between h-20 px-4 py-4 w-dvw md:px-8 backdrop-blur ">
+      <div
+        className="flex items-center select-none text-text-primary"
       >
-        <Link href="/" className="flex items-center">
-          <Logo size={60} />
-          <h1 className="mt-1 text-xl">Endy Kaishi®</h1>
-        </Link>
-      </motion.div>
-      <NavPC/>
-      <NavMobile/>
+        <Logo size={60} />
+        <h1 className="mt-1 text-xl">Endy Kaishi®</h1>
+      </div>
+      <a
+        href="mailto:enzoborrelli_official@outlook.com"
+        className="md:hidden text-text-primary"
+      >
+        <IoMail size={30}/>
+      </a>
+      <NavPC />
     </header>
   );
 }

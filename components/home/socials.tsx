@@ -5,7 +5,7 @@ import { m,LazyMotion, domAnimation } from 'framer-motion'
 
 export default function SocialsComp() {
   return (
-    <div className="flex items-center justify-start gap-4 mt-2">
+    <div className="flex items-center justify-center md:justify-start gap-4 mt-2">
       <LazyMotion features={domAnimation}>
             {Socials.map((social) => (
               <m.a
