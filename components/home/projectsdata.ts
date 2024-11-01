@@ -31,7 +31,7 @@ export const ProjectsData: ProjectType[] = [
     title: "Haunted Legends Map",
     description:
       "A map with urban legends across the world",
-    tags: ["nextjs", "typescript", "mabox-gl","framer-motion"],
+    tags: ["nextjs", "typescript", "maboxgl","framerMotion"],
     toPageUrl: "https://hauntedlegendsmap.vercel.app/",
     toCodeUrl: "https://github.com/EnzoBorrelli/hauntedlegendsmap",
     img: "/projects/haunted.png",
