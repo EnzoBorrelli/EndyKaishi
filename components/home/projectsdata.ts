@@ -28,6 +28,15 @@ export const ProjectsData: ProjectType[] = [
     img: "/projects/eestn5.png",
   },
   {
+    title: "Haunted Legends Map",
+    description:
+      "A map with urban legends across the world",
+    tags: ["nextjs", "typescript", "mabox-gl","framer-motion"],
+    toPageUrl: "https://hauntedlegendsmap.vercel.app/",
+    toCodeUrl: "https://github.com/EnzoBorrelli/hauntedlegendsmap",
+    img: "/projects/haunted.png",
+  },
+  {
     title: "EMROBOTS ecommerce",
     description:
       "an ecommerce web for the final project of school. EM ROBOTS",
