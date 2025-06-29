@@ -11,8 +11,7 @@ export default function Home() {
         <div className="w-full mb-8 text-left md:w-1/3 md:mb-0">
           <AnimatedText/>
           <p className="text-lg">
-            Frontend Developer, Specialized in React and Next.js, along with
-            Typescript
+            Crafting interactive web experiences using React, TypeScript, and the tools that bring ideas to life.
           </p>
           <h4 className="text-sm font-light text-text-secondary">
             Located in Buenos Aires, Argentina
