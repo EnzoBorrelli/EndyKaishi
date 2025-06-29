@@ -9,40 +9,78 @@ export interface ProjectType {
 
 export const ProjectsData: ProjectType[] = [
   {
-    title: "Zephy Discord Bot",
+    title: "Zephy's Starter Kit",
     description:
-      "a multipurpose discord bot made with discordjs and typescript",
-    tags: ["discordjs", "typescript", "mongodb", "nodejs","i18next"],
-    toPageUrl:
-      "https://discord.com/oauth2/authorize?client_id=1290767235337687206&permissions=8&integration_type=0&scope=applications.commands+bot",
-    toCodeUrl: "https://github.com/EnzoBorrelli/Zephy-alpha",
-    img: "/projects/zephy.png",
+      "A modular and scalable Discord bot template built with TypeScript,Supabase, and i18n support. Perfect for developers looking to kickstart their Discord bot projects with a ready-to-use solution.",
+    tags: [
+      "Discord.js",
+      "TypeScript",
+      "Node.js",
+      "i18n",
+      "supabase",
+      "modular",
+      "ready-to-use",
+    ],
+    toPageUrl: "https://endykaishi.gumroad.com/l/zephystarterkit",
+    toCodeUrl: "",
+    img: "/mockups/mockup_zephy.png",
+  },
+  {
+    title: "Pacman Remixed",
+    description:
+      "a remake of the classic Pacman. This project is not affiliated with, endorsed by, or sponsored by Bandai Namco. All rights to the original Pac-Man game belong to their respective owners.",
+    tags: [
+      "Remix",
+      "Typescrpt",
+      "Redux",
+      "PixiJS",
+      "Howler.js",
+      "PC-only",
+      "sprite-based",
+    ],
+    toPageUrl: "https://pacman-remixed.vercel.app/",
+    toCodeUrl: "https://github.com/EnzoBorrelli/pacman-remixed",
+    img: "/mockups/mockup_pacman_remixed.png",
   },
   {
     title: "EEST Nº5 web page",
     description:
-      "the official web page of the technical school EEST Nº5, Argentina",
-    tags: ["nextjs", "typescript", "supabase","prisma","firebase CM"],
+      "institutional web page for the EEST Nº5 school in Argentina. Due to internal circumstances, this page is not officially affiliated with the school. You can still take a look at this demo.",
+    tags: [
+      "Next.js",
+      "Typescript",
+      "supabase",
+      "prisma",
+      "auth.js",
+      "firebase CM",
+    ],
     toPageUrl: "https://eestn-5-web-page.vercel.app/",
     toCodeUrl: "https://github.com/EnzoBorrelli/EESTN5-webPage",
-    img: "/projects/eestn5.png",
+    img: "/mockups/mockup_eestn5.png",
   },
   {
     title: "Haunted Legends Map",
     description:
-      "A map with urban legends across the world",
-    tags: ["nextjs", "typescript", "maboxgl","framerMotion"],
+      "An interactive map containing urban legends across the world. This was created as a personal side-project to celebrate Halloween 2024. It can be expected to receive updates in the future.",
+    tags: [
+      "nextjs",
+      "Typescript",
+      "maboxgl",
+      "framerMotion",
+      "Halloween",
+      "interactive map",
+    ],
     toPageUrl: "https://hauntedlegendsmap.vercel.app/",
     toCodeUrl: "https://github.com/EnzoBorrelli/hauntedlegendsmap",
-    img: "/projects/haunted.png",
+    img: "/mockups/mockup_haunted.png",
   },
   {
-    title: "EMROBOTS ecommerce",
+    title: "EMROBOTS school prototype",
     description:
-      "an ecommerce web for the final project of school. EM ROBOTS",
-    tags: ["reactjs", "javascript", "firebase", "auth0","mercadopagoAPI"],
-    toPageUrl: "https://emrobots-virtualshop.netlify.app/Catalogue",
-    toCodeUrl: "https://github.com/EnzoBorrelli/EESTN5-webPage",
-    img: "/projects/emrobots.png",
+      "A virtual shop prototype for the EMROBOTS school project, featuring a catalog of products. This project was made for learning purposes. Further development should not be expected.",
+    tags: ["react.js", "javascript", "firebase", "auth0", "mercadopagoAPI"],
+    toPageUrl: "https://emrobots-virtualshop.netlify.app/",
+    toCodeUrl: "https://github.com/EnzoBorrelli/EMR-WebAPP",
+    img: "/mockups/nomockup_emrobots.png",
   },
 ];
