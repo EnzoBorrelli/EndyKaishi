@@ -1,13 +1,10 @@
 import { IconType } from "react-icons";
-import { FaReact } from "react-icons/fa6";
-import { RiSupabaseLine } from "react-icons/ri";
-import { SiFramer, SiTailwindcss } from "react-icons/si";
+import { SiRedux, SiTailwindcss,SiRemix,SiReact,SiSupabase } from "react-icons/si";
 import {
   TbBrandTypescript,
   TbBrandNextjs,
   TbBrandPrisma,
 } from "react-icons/tb";
-import { VscVscode } from "react-icons/vsc";
 
 interface Skill {
   name: string;
@@ -20,7 +17,7 @@ export const skills: Skill[] = [
   },
   {
     name: "react",
-    icon: FaReact,
+    icon: SiReact,
   },
   {
     name: "nextjs",
@@ -32,18 +29,18 @@ export const skills: Skill[] = [
   },
   {
     name: "supabase",
-    icon: RiSupabaseLine,
+    icon: SiSupabase,
   },
   {
     name: "tailwind",
     icon: SiTailwindcss,
   },
   {
-    name: "framer",
-    icon: SiFramer,
+    name: "remix",
+    icon: SiRemix,
   },
   {
-    name: "vscode",
-    icon: VscVscode,
+    name: "redux",
+    icon: SiRedux,
   },
 ];
