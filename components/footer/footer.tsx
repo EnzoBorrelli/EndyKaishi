@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="items-center justify-between px-4 py-4 md:px-8 w-dvw md:flex bg-brand-400 ">
       <h2 className="mb-4 text-center md:mb-0 md:text-lg text-text-secondary">
-        © 2024 Endy Kaishi® by Enzo Borrelli
+        © 2024–{new Date().getFullYear()} <span className="font-semibold">Endy Kaishi®</span> by Enzo Borrelli
       </h2>
       <div className="flex items-center justify-center gap-4 text-lg md:gap-6 md:text-3xl">
         <Mailto/>
