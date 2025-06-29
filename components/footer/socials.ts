@@ -9,17 +9,23 @@ import {
 
 export const Socials = [
   {
-    name: "Twitter",
-    icon: FaXTwitter,
-    url: "https://x.com/Endy_Kaishi",
+    name: "GitHub",
+    icon: FaGithub,
+    url: "https://github.com/EnzoBorrelli",
     color: "text-white bg-black",
   },
   {
     name: "Instagram",
     icon: FaInstagram,
-    url: "https://www.instagram.com/endy_debug_diaries/",
+    url: "https://www.instagram.com/endy_codex/",
     color:
       "text-white bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600",
+  },
+  {
+    name: "Twitter",
+    icon: FaXTwitter,
+    url: "https://x.com/Endy_Kaishi",
+    color: "text-white bg-black",
   },
   {
     name: "Youtube",
@@ -28,21 +34,9 @@ export const Socials = [
     color: "text-white bg-red-600",
   },
   {
-    name: "GitHub",
-    icon: FaGithub,
-    url: "https://github.com/EnzoBorrelli",
-    color: "text-white bg-black",
-  },
-  {
     name: "Linkedin",
     icon: FaLinkedinIn,
     url: "https://linkedin.com/in/enzoborrelli",
     color: "text-white bg-sky-600",
-  },
-  {
-    name: "Discord",
-    icon: FaDiscord,
-    url: "https://discord.gg/2ATQkaypqQ",
-    color: "text-white bg-indigo-900",
   },
 ];
