@@ -29,7 +29,7 @@ export const Socials = [
   {
     name: "Youtube",
     icon: FaYoutube,
-    url: "https://www.youtube.com/@Endy.Debug.Diaries",
+    url: "https://www.youtube.com/@EndysCodex",
     color: "text-white bg-red-600",
   },
   {
