@@ -1,10 +1,23 @@
+import { IconType } from "react-icons";
+import { FaExternalLinkAlt, FaCodeBranch } from "react-icons/fa";
+import { GiPumpkinMask } from "react-icons/gi";
+import { RiGameFill } from "react-icons/ri";
+import { BADGES } from "./badges";
+import { IoCodeDownload } from "react-icons/io5";
+
+type externalLinks = {
+  url: string;
+  label: string;
+  icon: IconType;
+};
+
 export interface ProjectType {
   title: string;
   description: string;
   tags: string[];
-  toPageUrl: string;
-  toCodeUrl: string;
+  externalLinks: externalLinks[];
   img: string;
+  badge?: number;
 }
 
 export const ProjectsData: ProjectType[] = [
@@ -21,9 +34,15 @@ export const ProjectsData: ProjectType[] = [
       "modular",
       "ready-to-use",
     ],
-    toPageUrl: "https://endykaishi.gumroad.com/l/zephystarterkit",
-    toCodeUrl: "",
+    externalLinks: [
+      {
+        url: "https://endykaishi.gumroad.com/l/zephystarterkit",
+        label: "Get it on Gumroad",
+        icon: FaExternalLinkAlt,
+      },
+    ],
     img: "/mockups/mockup_zephy.png",
+    badge: BADGES.FEATURED,
   },
   {
     title: "Pacman Remixed",
@@ -38,9 +57,20 @@ export const ProjectsData: ProjectType[] = [
       "PC-only",
       "sprite-based",
     ],
-    toPageUrl: "https://pacman-remixed.vercel.app/",
-    toCodeUrl: "https://github.com/EnzoBorrelli/pacman-remixed",
+    externalLinks: [
+      {
+        url: "https://pacman-remixed.vercel.app/",
+        label: "Play it now",
+        icon: RiGameFill,
+      },
+      {
+        url: "https://github.com/EnzoBorrelli/pacman-remixed",
+        label: "Source code",
+        icon: FaCodeBranch,
+      },
+    ],
     img: "/mockups/mockup_pacman_remixed.png",
+    badge:BADGES.NEW
   },
   {
     title: "EEST Nº5 web page",
@@ -54,9 +84,43 @@ export const ProjectsData: ProjectType[] = [
       "auth.js",
       "firebase CM",
     ],
-    toPageUrl: "https://eestn-5-web-page.vercel.app/",
-    toCodeUrl: "https://github.com/EnzoBorrelli/EESTN5-webPage",
+    externalLinks: [
+      {
+        url: "https://eestn-5-web-page.vercel.app/",
+        label: "Visit the page",
+        icon: FaExternalLinkAlt,
+      },
+      {
+        url: "https://github.com/EnzoBorrelli/EESTN5-webPage",
+        label: "Source code",
+        icon: FaCodeBranch,
+      },
+    ],
     img: "/mockups/mockup_eestn5.png",
+    badge: BADGES.UPDATED,
+  },
+  {
+    title: "create-endy-pixigame",
+    description:
+      "A custom Remix + PixiJS project generator for pixel art web games — powered by Vite, Redux, and TypeScript.",
+    tags: [
+      "Remix",
+      "Typescript",
+      "Redux",
+      "PixiJS",
+      "Howler.js",
+      "npm package",
+      "template",
+    ],
+    externalLinks: [
+      {
+        url: "https://www.npmjs.com/package/create-endy-pixigame?activeTab=readme",
+        label: "get the package",
+        icon: IoCodeDownload,
+      },
+    ],
+    img: "/mockups/create-endy-pixigame.jpg",
+    badge: BADGES.NEW,
   },
   {
     title: "Haunted Legends Map",
@@ -70,8 +134,18 @@ export const ProjectsData: ProjectType[] = [
       "Halloween",
       "interactive map",
     ],
-    toPageUrl: "https://hauntedlegendsmap.vercel.app/",
-    toCodeUrl: "https://github.com/EnzoBorrelli/hauntedlegendsmap",
+    externalLinks: [
+      {
+        url: "https://hauntedlegendsmap.vercel.app/",
+        label: "See the legends",
+        icon: GiPumpkinMask,
+      },
+      {
+        url: "https://github.com/EnzoBorrelli/hauntedlegendsmap",
+        label: "Source code",
+        icon: FaCodeBranch,
+      },
+    ],
     img: "/mockups/mockup_haunted.png",
   },
   {
@@ -79,8 +153,19 @@ export const ProjectsData: ProjectType[] = [
     description:
       "A virtual shop prototype for the EMROBOTS school project, featuring a catalog of products. This project was made for learning purposes. Further development should not be expected.",
     tags: ["react.js", "javascript", "firebase", "auth0", "mercadopagoAPI"],
-    toPageUrl: "https://emrobots-virtualshop.netlify.app/",
-    toCodeUrl: "https://github.com/EnzoBorrelli/EMR-WebAPP",
+    externalLinks: [
+      {
+        url: "https://emrobots-virtualshop.netlify.app/",
+        label: "visit the page",
+        icon: FaExternalLinkAlt,
+      },
+      {
+        url: "https://github.com/EnzoBorrelli/EMR-WebAPP",
+        label: "Source code",
+        icon: FaCodeBranch,
+      },
+    ],
     img: "/mockups/nomockup_emrobots.png",
+    badge: BADGES.ARCHIVED,
   },
 ];

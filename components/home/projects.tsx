@@ -2,9 +2,8 @@
 import Image from "next/image";
 import React from "react";
 import { ProjectType } from "./projectsdata";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { FaCodeBranch } from "react-icons/fa6";
 import { LazyMotion, domAnimation, m } from "framer-motion";
+import Badge from "./badge";
 
 export default function Projects({
   projectData,
@@ -19,10 +18,11 @@ export default function Projects({
         initial={{ x: "100dvw" }}
         animate={{ x: "0" }}
         transition={{ type: "spring", duration: 0.7, delay: delay * 0.5 }}
-        className="rounded text-left bg-brand-400 max-w-[350px] ring-2 ring-brand-200 mb-6"
+        className="relative rounded text-left bg-brand-400 max-w-[350px] ring-2 ring-brand-200 mb-6"
       >
+        <Badge ID={projectData.badge!} />
         <a
-          href={projectData.toPageUrl}
+          href={projectData.externalLinks[0].url}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -48,38 +48,23 @@ export default function Projects({
             ))}
           </div>
           <div className="flex items-center justify-center gap-6 mt-4 mb-2">
-            <m.a
-              whileHover={{
-                y: -3,
-                scale: 1.2,
-                transition: { duration: 0.3, type: "spring" },
-              }}
-              className="flex items-center justify-center gap-2 px-2 rounded-sm bg-accent-1 text-brand-500"
-              href={projectData.toPageUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaExternalLinkAlt />
-              {projectData.title === "Zephy's Starter Kit"
-                ? "Get it on Gumroad"
-                : "website"}
-            </m.a>
-            <m.a
-              whileHover={{
-                y: -3,
-                scale: 1.2,
-                transition: { duration: 0.3, type: "spring" },
-              }}
-              className={`${
-                projectData.title === "Zephy's Starter Kit" ? "hidden" : "flex"
-              } items-center justify-center gap-2 px-2 rounded-sm bg-accent-1 text-brand-500`}
-              href={projectData.toCodeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaCodeBranch />
-              source code
-            </m.a>
+            {projectData.externalLinks.map((link, index) => (
+              <m.a
+                key={index}
+                whileHover={{
+                  y: -3,
+                  scale: 1.2,
+                  transition: { duration: 0.3, type: "spring" },
+                }}
+                className="flex items-center justify-center gap-2 px-2 rounded-sm bg-accent-1 text-brand-500"
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <link.icon />
+                {link.label}
+              </m.a>
+            ))}
           </div>
         </div>
       </m.article>
