@@ -1,8 +1,10 @@
+'use client'
 import Projects from "@/components/home/projects";
 import { ProjectsData } from "@/components/home/projectsdata";
 import AnimatedText from "@/components/home/animatedText";
 import SocialsComp from "@/components/home/socials";
 import SkillsBlock from "@/components/home/skillsBlock";
+import VideoCards from "@/components/home/videoCards";
 
 export default function Home() {
   return (
@@ -21,7 +23,11 @@ export default function Home() {
         <SkillsBlock/>
       </section>
       <section className="flex-col justify-center gap-2 py-4 mt-2 md:px-10">
-        <h2 className="my-4 text-2xl font-bold">My recent Work</h2>
+        <h2 className="my-4 text-2xl font-bold">Lastest Videos</h2>
+        <VideoCards/>
+      </section>
+      <section className="flex-col justify-center gap-2 py-4 mt-2 md:px-10">
+        <h2 className="my-4 text-2xl font-bold">Recent Work</h2>
         <div className="grid grid-cols-1 justify-items-center md:grid-cols-3">
           {ProjectsData.map((project, index) => (
             <Projects key={index} projectData={project} delay={index} />
