@@ -148,6 +148,30 @@ export const ProjectsData: ProjectType[] = [
     ],
     img: "/mockups/mockup_haunted.png",
   },
+  
+  {
+    title: "pixUNO | pixelated UNO",
+    description:
+      "A pixelated version of the classic UNO card game, featuring a unique art style and engaging gameplay. This project will be discontinued until further notice",
+    tags: [
+      "remix",
+      "Typescript",
+      "redux",
+      "pixiJS",
+      "Howler.js",
+      "sprite-based",
+      "cross-platform",
+    ],
+    externalLinks: [
+      {
+        url: "https://github.com/EnzoBorrelli/pixuno",
+        label: "Source code",
+        icon: FaCodeBranch,
+      },
+    ],
+    img: "/mockups/pixuno.jpg",
+    badge:BADGES.ARCHIVED
+  },
   {
     title: "EMROBOTS school prototype",
     description:
