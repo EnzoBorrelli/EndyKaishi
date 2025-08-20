@@ -41,7 +41,7 @@ export const projects: iProject[] = [
         icon: FaExternalLinkAlt,
       },
     ],
-    image: "/mockups/mockup_zephy.png",
+    image: "/mockups/zephy.png",
     badge: BADGES_ID.FEATURED,
   },
   {
@@ -69,7 +69,7 @@ export const projects: iProject[] = [
         icon: FaCodeBranch,
       },
     ],
-    image: "/mockups/mockup_pacman_remixed.png",
+    image: "/mockups/pacman.png",
     badge: BADGES_ID.NEW,
   },
   {
@@ -96,7 +96,7 @@ export const projects: iProject[] = [
         icon: FaCodeBranch,
       },
     ],
-    image: "/mockups/mockup_eestn5.png",
+    image: "/mockups/eest5.png",
     badge: BADGES_ID.UPDATED,
   },
   {
@@ -119,7 +119,7 @@ export const projects: iProject[] = [
         icon: IoCodeDownload,
       },
     ],
-    image: "/mockups/create-endy-pixigame.jpg",
+    image: "/mockups/endynpm.png",
     badge: BADGES_ID.NEW,
   },
   {
@@ -146,7 +146,7 @@ export const projects: iProject[] = [
         icon: FaCodeBranch,
       },
     ],
-    image: "/mockups/mockup_haunted.png",
+    image: "/mockups/haunted.png",
   },
 
   {
@@ -169,7 +169,7 @@ export const projects: iProject[] = [
         icon: FaCodeBranch,
       },
     ],
-    image: "/mockups/pixuno.jpg",
+    image: "/mockups/pixuno.png",
     badge: BADGES_ID.ARCHIVED,
   },
   {
@@ -189,7 +189,7 @@ export const projects: iProject[] = [
         icon: FaCodeBranch,
       },
     ],
-    image: "/mockups/nomockup_emrobots.png",
+    image: "/mockups/emrobots.png",
     badge: BADGES_ID.ARCHIVED,
   },
 ];

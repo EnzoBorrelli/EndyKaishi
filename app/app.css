@@ -1,2 +1,30 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-500: rgb(12, 11, 29);
+  --color-brand-400: rgb(10, 49, 64);
+  --color-brand-300: rgb(22, 128, 140);
+  --color-brand-200: rgb(0, 222, 204);
+  --color-brand-100: rgb(126, 242, 242);
+  --color-accent-1: rgb(242, 176, 61);
+  --color-accent-2: rgb(242, 61, 51);
+  --color-text-primary: rgb(240, 255, 255);
+  --color-text-secondary: rgb(220, 234, 234);
+  --color-text-disabled: rgb(196, 207, 207);
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.background-layer {
+  will-change: transform, opacity; /* Optimize for performance */
+}
+
+.animated-char {
+  will-change: opacity, transform; /* Optimize for GSAP animations */
+}
+
+.animated-block {
+  will-change: transform; /* Optimize for GSAP animations */
+}
